@@ -8,6 +8,6 @@ object PatternMatchingWithOption extends App {
     case Some("tasteLevel") => println(s"donut is Very Tasty")
     case None => println(s"donut taste is Tasty")
   }
-  
+
 
 }
