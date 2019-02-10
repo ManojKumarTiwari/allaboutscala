@@ -6,7 +6,7 @@ package com.allaboutscala.chapter.three.functioncomposition17
 // Mathematically speaking, f(x) andThen g(x) = g(f(x)). The results of the first function f(x) is ran
 // first and will be passed as input to the second function g(x).
 
-object FunctionUsingVal extends App {
+object UsingAndThen extends App {
 
   println("Step 1: Assume a pre-calculated total cost amount")
   val totalCost: Double = 10
@@ -30,5 +30,10 @@ object FunctionUsingVal extends App {
 
   println("\nStep 5: How to call andThen on a val function")
   println(s"Total cost of 5 Glazed donut with discount and included tax is ${(applyDiscountValFunction andThen applyTaxValFunction)(totalCost)}")
+
+  //The apply discount function was called first andThen the apply tax function was called.
+
+  //The output from the first apply discount function was also passed through as input parameter to the
+  // second apply tax function
 
 }
